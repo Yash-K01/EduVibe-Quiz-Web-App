@@ -23,7 +23,7 @@ const authService = {
       
       // Handle specific error cases
       if (error.message === 'Network Error') {
-        throw { message: 'Cannot connect to server. Please check if backend is running on http://localhost:5000' };
+        throw { message: 'Cannot connect to server. Please check if backend is running on https://eduvibe-quiz-web-app.onrender.com' };
       }
       
       if (error.response) {

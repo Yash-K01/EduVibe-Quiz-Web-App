@@ -65,7 +65,7 @@ const AddStudent = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const response = await api.get('/students');
@@ -91,7 +91,7 @@ const AddStudent = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const response = await api.get('/teachers');
@@ -174,7 +174,7 @@ const AddStudent = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }
       });
       const response = await api.post('/students/add', formData);
@@ -200,7 +200,7 @@ const AddStudent = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }
       });
       const response = await api.put(`/students/${selectedStudent._id}`, editFormData);
@@ -225,7 +225,7 @@ const AddStudent = () => {
       try {
         const token = localStorage.getItem('token');
         const api = axios.create({
-          baseURL: 'http://localhost:5000/api',
+          baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
           headers: { 'Authorization': `Bearer ${token}` }
         });
         await api.delete(`/students/${studentId}`);

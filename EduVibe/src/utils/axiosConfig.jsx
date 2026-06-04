@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Use localhost, not 127.0.0.1
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ axiosInstance.interceptors.response.use(
       console.error('❌ Server Error:', error.response.status, error.response.data);
     } else if (error.request) {
       console.error('❌ No Response - Backend not reachable');
-      console.error('   Make sure backend is running on: http://localhost:5000');
+      console.error('   Make sure backend is running on: https://eduvibe-quiz-web-app.onrender.com');
     } else {
       console.error('❌ Error:', error.message);
     }

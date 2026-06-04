@@ -95,7 +95,7 @@ const AdminLogin = () => {
     try {
       // Create axios instance with base URL
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         timeout: 10000,
         headers: {
           'Content-Type': 'application/json',
@@ -162,7 +162,7 @@ const AdminLogin = () => {
   // Test backend connection function
   const testBackendConnection = async () => {
     try {
-      const api = axios.create({ baseURL: 'http://localhost:5000/api' });
+      const api = axios.create({ baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api' });
       const response = await api.get('/health');
       alert(`✅ Backend connected! ${response.data.message}`);
     } catch (error) {

@@ -58,7 +58,7 @@ const StudentProfile = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -88,7 +88,7 @@ const StudentProfile = () => {
         });
         
         if (profile.photo) {
-          setPreviewUrl(`http://localhost:5000${profile.photo}`);
+          setPreviewUrl(`https://eduvibe-quiz-web-app.onrender.com${profile.photo}`);
         }
       }
     } catch (error) {
@@ -124,7 +124,7 @@ const StudentProfile = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

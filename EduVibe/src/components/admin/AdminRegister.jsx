@@ -111,14 +111,14 @@ const AdminRegister = () => {
 
     try {
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         timeout: 10000,
         headers: {
           'Content-Type': 'application/json',
         }
       });
 
-      console.log('Sending to:', 'http://localhost:5000/api/auth/register');
+      console.log('Sending to:', 'https://eduvibe-quiz-web-app.onrender.com/api/auth/register');
 
       const response = await api.post('/auth/register', {
         schoolName: formData.schoolName,
@@ -158,7 +158,7 @@ const AdminRegister = () => {
         }
       } else if (error.request) {
         console.log('No response from server');
-        setApiError('Cannot connect to server. Please check if backend is running on http://localhost:5000');
+        setApiError('Cannot connect to server. Please check if backend is running on https://eduvibe-quiz-web-app.onrender.com');
       } else {
         setApiError(error.message || 'Registration failed. Please try again.');
       }
@@ -169,7 +169,7 @@ const AdminRegister = () => {
 
   const testBackendConnection = async () => {
     try {
-      const api = axios.create({ baseURL: 'http://localhost:5000/api' });
+      const api = axios.create({ baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api' });
       const response = await api.get('/health');
       alert(`✅ Backend connected! ${response.data.message}`);
     } catch (error) {

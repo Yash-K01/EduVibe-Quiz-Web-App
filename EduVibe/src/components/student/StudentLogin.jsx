@@ -92,7 +92,7 @@ const StudentLogin = () => {
 
     try {
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         timeout: 10000,
         headers: {
           'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ const StudentLogin = () => {
           setApiError(error.response.data.message || 'Login failed');
         }
       } else if (error.request) {
-        setApiError('Cannot connect to server. Please check if backend is running on http://localhost:5000');
+        setApiError('Cannot connect to server. Please check if backend is running on https://eduvibe-quiz-web-app.onrender.com');
       } else {
         setApiError(error.message || 'Login failed. Please try again.');
       }
@@ -152,7 +152,7 @@ const StudentLogin = () => {
 
   const testBackendConnection = async () => {
     try {
-      const api = axios.create({ baseURL: 'http://localhost:5000/api' });
+      const api = axios.create({ baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api' });
       const response = await api.get('/health');
       alert(`✅ Backend connected! ${response.data.message}`);
     } catch (error) {

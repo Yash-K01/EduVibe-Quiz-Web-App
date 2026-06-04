@@ -35,7 +35,7 @@ const StudSubject = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -63,7 +63,7 @@ const StudSubject = () => {
     try {
       const token = localStorage.getItem('token');
       const api = axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://eduvibe-quiz-web-app.onrender.com/api',
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
